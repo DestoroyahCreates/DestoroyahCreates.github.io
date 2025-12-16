@@ -7,11 +7,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body style="text-align: center;">
+    <center>
     <h1 id="headin">Weightage Calculator</h1>
+    <div class="gren" style="border-radius: 15px;">
     <h3>Instructions:</h3>
-    <p>Enter the marks which you recieved for the respective subjects in their given spots. Please select your stream below. To find the avg marks to get in finals to achieve a certain percentage, please check the checkbox next to PT3 and input the expected marks in PT3</p>
-<center>
-    <table border="1" style="border-collapse: collapse;">
+    <p style="border-radius: 15px;">Enter the marks which you recieved for the respective subjects in their given spots. Please select your stream below. To find the avg marks to get in finals to achieve a certain percentage, please check the checkbox next to PT2 and input the expected marks in PT2</p>
+    </div>
+    
+    <table>
 <select id="stream" style="width: 128px; height: 32px; margin-bottom: 32px;">
     <option value="both">MBPC</option>
   <option value="math">MPC</option>
@@ -25,7 +28,7 @@
 <th>Subject</th>
 <th>PT1(10M)</th>
 <th>Half Yearly(30M)</th>
-<th>PT3(10M)<input type="checkbox" id="pt3Check"></th>
+<th>PT2(10M)<input type="checkbox" id="pt3Check"></th>
 
 
 </tr>
@@ -84,14 +87,16 @@
 
 </table>
 </center>
-<input type="number" id="requiredPerc" placeholder="Enter expected final percentage" style="margin-top: 24px; width:216px; height: 32px;">
-<button id="calculateBtn" style="margin-top: 24px; size: width:64px; height: 32px;">Calculate</button>
-
+<span></span>
+<input class="gren btn1" type="number" id="requiredPerc" placeholder="Enter expected final percentage" style="margin-top: 24px; width:216px auto; height: 32px;">
+<button class="gren btn2 " id="calculateBtn" style="margin-top: 24px; size: width:64px auto; height: 34px;">Calculate</button>
+<span></span>
 <h1 id="result1"></h1>
+
 <h1 id="result2"></h1>
-<label id="prediction">Required marks in finals:</label>
+<label class="gren" id="prediction" style="padding: 10px 15px; margin-bottom: 30px;">Required marks in finals:</label>
 <center>
-<table border="1" style="border-collapse: collapse;">
+<table>
     <thead>
         <tr>
             <th>Subject</th>
@@ -99,31 +104,31 @@
         </tr>
     </thead>
     <tr>
-        <td>Physics</td>
+        <td>Physics(Out of 70)</td>
         <td id="phyPred">-</td>
     </tr>
     <tr>
-        <td>Chemistry</td>
+        <td>Chemistry(Out of 70)</td>
         <td id="chePred">-</td> 
     </tr>
     <tr>
-        <td>Maths</td>
+        <td>Maths(Out of 80)</td>
         <td id="matPred">-</td>
     </tr>
     <tr>
-        <td>Biology</td>
+        <td>Biology(Out of 70)</td>
         <td id="bioPred">-</td>
     </tr>
     <tr>
-        <td>English</td>
+        <td>English(Out of 80)</td>
         <td id="engPred">-</td>
     </tr>
     <tr>
-        <td>AI/PAT</td>
+        <td>AI/PAT(Out of 50)</td>
         <td id="aiPred">-</td>
     </tr>
     <tr>
-        <td>CS/IP</td>
+        <td>CS/IP(Out of 70)</td>
         <td id="ipPred">-</td>
     </tr>
 </table>
