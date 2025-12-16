@@ -87,7 +87,7 @@ button.addEventListener("click", function() {
     }
     currentWeightage = Number((totalWeightage / 600 * 100).toFixed(2));
     
-    document.getElementById("result2").innerText = "Your Weightage is: " + currentWeightage + "%";
+    document.getElementById("result2").innerText = "Your Weightage is so far is: " + currentWeightage + "%";
     console.log(currentWeightage)
     console.log(checkbox.checked)
     if (checkbox.checked) {
@@ -144,3 +144,4 @@ button.addEventListener("click", function() {
 
 
 });
+
