@@ -1,0 +1,66 @@
+body {
+    background-color: #89c5d0;
+    color: rgb(61, 80, 84)
+}
+table, th, td {
+    background-color: #e4f0c8;
+    border: 3.5px solid #ddc5f2;
+    border-collapse: collapse;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+.gren {
+    background-color: #b9e0cb;
+  padding: 0px 15px;
+  max-width: 500px;
+  margin: 15px auto;
+  
+
+  margin-bottom: 15px;
+}
+
+#stream {
+    background-color: #f2c3b9;
+    border-radius: 2px;
+
+}
+#stream:hover {
+    background-color: #f5977e;
+}
+input[type="number"] {
+    background-color: #e4f0c8;
+    border: 1px solid black;
+}
+.btn1{
+    margin-bottom: 5px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 15px;
+}
+.btn2{
+    margin-bottom: 5px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 20px;
+}
+#calculateBtn{
+    transition: transform 0.1s ease, background-color 0.1s;
+    
+
+}
+#calculateBtn:hover {
+    transform: scale(1.05);
+    background-color: #a3d2ca;
+}
+#calculateBtn:active {
+    transform: scale(0.95);
+    background-color: #7fb8b1;
+}
+#requiredPerc:hover {
+    background-color: #d6eee2;
+    transform: scale(1.02);
+}
+#requiredPerc::placeholder {
+
+    transform: scale(0.98);
+}
