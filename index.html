@@ -1,139 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weightage calc</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body style="text-align: center;">
     <center>
-    <h1 id="headin">Weightage Calculator</h1>
-    <div class="gren" style="border-radius: 15px;">
-    <h3>Instructions:</h3>
-    <p style="border-radius: 15px;">Enter the marks which you recieved for the respective subjects in their given spots. Please select your stream below. To find the avg marks to get in finals to achieve a certain percentage, please check the checkbox next to PT2 and input the expected marks in PT2</p>
-    </div>
-    
-    <table>
-<select id="stream" style="width: 128px; height: 32px; margin-bottom: 32px;">
-    <option value="both">MBPC</option>
-  <option value="math">MPC</option>
-  <option value="bio">BPC</option>
-  
+        <h1 id="headin">Weightage Calculator</h1>
+        <div class="gren" style="border-radius: 15px;">
+            <h3>Instructions:</h3>
+            <ul style="border-radius: 15px;">
+                <li><b>To find your current marks percentage and weightage to your overall percentage</b>, select your stream (MBPC, MPC, BPC) from the dropdown menu.</li>
+                <li>Enter the marks obtained in PT1, Half Yearly for each subject. </li>
+                <li>Click on the "Calculate" button to see your current percentage and weightage to your final
+                    percentage.</li>
+                <li><b>To find the required marks in finals to achieve a certain percentage</b>, then tick
+                    the checkbox next to PT3 and enter your PT3 marks as well.</li>
+                <li>Then you can enter the overall percentage you want to achieve in the input box and hit "Calculate"
+                </li>
+                <li><b>Keep in mind</b>, this is not exactly 100% accurate due to rounding errors.</li>
+                <li>You can still achieve your desired percentage if you get a bit less below the avg marks in one
+                    subject by getting more than the avg marks in another subject.</li>
+            </ul>
+        </div>
 
-</select>
-  
-
-<thead>
-<tr>
-<th>Subject</th>
-<th>PT1(10M)</th>
-<th>Half Yearly(30M)</th>
-<th>PT2(10M)<input type="checkbox" id="pt3Check"></th>
+        <table>
+            <select id="stream" style="width: 128px; height: 32px; margin-bottom: 32px;">
+                <option value="both">MBPC</option>
+                <option value="math">MPC</option>
+                <option value="bio">BPC</option>
 
 
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Physics</td>
-<td><input type="number" id="phy1" min="0" max="35">Out of 35</td>
-<td><input type="number" id="phy2" min="0" max="70">Out of 70</td>
-<td><input type="number" id="phy3" min="0" max="35">Out of 35</td>
+            </select>
 
-</tr>
-<tr>
-<td>Chemistry</td>
-<td><input type="number" id="che1" min="0" max="35">Out of 35</td>
-<td><input type="number" id="che2" min="0" max="70">Out of 70</td>
-<td><input type="number" id="che3" min="0" max="35">Out of 35</td>
 
-</tr>
-<tr>
-<td>English</td>
-<td><input type="number" id="eng1" min="0" max="40">Out of 40</td>
-<td><input type="number" id="eng2" min="0" max="80">Out of 80</td>
-<td><input type="number" id="eng3" min="0" max="40">Out of 40</td>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>PT1(10M)</th>
+                    <th>Half Yearly(30M)</th>
+                    <th>PT2(10M)<input type="checkbox" id="pt3Check"></th>
 
-</tr>
-<tr id="math">
-<td>Maths</td>
-<td><input type="number" id="mat1" min="0" max="40">Out of 40</td>
-<td><input type="number" id="mat2" min="0" max="80">Out of 80</td>
-<td><input type="number" id="mat3" min="0" max="40">Out of 40</td>
 
-</tr>
-<tr id="bio">
-<td >Biology</td>
-<td><input type="number" id="bio1" min="0" max="35">Out of 35</td>
-<td><input type="number" id="bio2" min="0" max="70">Out of 70</td>
-<td><input type="number" id="bio3" min="0" max="35">Out of 35</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Physics</td>
+                    <td><input type="number" id="phy1" min="0" max="35">Out of 35</td>
+                    <td><input type="number" id="phy2" min="0" max="70">Out of 70</td>
+                    <td><input type="number" id="phy3" min="0" max="35">Out of 35</td>
 
-</tr>
-<tr  id="ip" style="visibility: hidden;">
-<td>CS/IP</td>
-<td><input type="number" id="c1" min="0" max="35">Out of 35</td>
-<td><input type="number" id="c2" min="0" max="70">Out of 70</td>
-<td><input type="number" id="c3" min="0" max="35">Out of 35</td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td><input type="number" id="che1" min="0" max="35">Out of 35</td>
+                    <td><input type="number" id="che2" min="0" max="70">Out of 70</td>
+                    <td><input type="number" id="che3" min="0" max="35">Out of 35</td>
 
-</tr>
-<tr>
-<td>AI/PAT</td>
-<td><input type="number" id="a1" min="0" max="40">Out of 40</td>
-<td><input type="number" id="a2" min="0" max="50">Out of 50</td>
-<td><input type="number" id="a3" min="0" max="40">Out of 40</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td><input type="number" id="eng1" min="0" max="40">Out of 40</td>
+                    <td><input type="number" id="eng2" min="0" max="80">Out of 80</td>
+                    <td><input type="number" id="eng3" min="0" max="40">Out of 40</td>
 
-</tr>
-</tbody>
+                </tr>
+                <tr id="math">
+                    <td>Maths</td>
+                    <td><input type="number" id="mat1" min="0" max="40">Out of 40</td>
+                    <td><input type="number" id="mat2" min="0" max="80">Out of 80</td>
+                    <td><input type="number" id="mat3" min="0" max="40">Out of 40</td>
 
-</table>
-</center>
-<span></span>
-<input class="gren btn1" type="number" id="requiredPerc" placeholder="Enter expected final percentage" style="margin-top: 24px; width:216px auto; height: 32px;">
-<button class="gren btn2 " id="calculateBtn" style="margin-top: 24px; size: width:64px auto; height: 34px;">Calculate</button>
-<span></span>
-<h1 id="result1"></h1>
+                </tr>
+                <tr id="bio">
+                    <td>Biology</td>
+                    <td><input type="number" id="bio1" min="0" max="35">Out of 35</td>
+                    <td><input type="number" id="bio2" min="0" max="70">Out of 70</td>
+                    <td><input type="number" id="bio3" min="0" max="35">Out of 35</td>
 
-<h1 id="result2"></h1>
-<label class="gren" id="prediction" style="padding: 10px 15px; margin-bottom: 30px;">Required marks in finals:</label>
-<center>
-<table>
-    <thead>
-        <tr>
-            <th>Subject</th>
-            <th>Average marks required</th>
-        </tr>
-    </thead>
-    <tr>
-        <td>Physics(Out of 70)</td>
-        <td id="phyPred">-</td>
-    </tr>
-    <tr>
-        <td>Chemistry(Out of 70)</td>
-        <td id="chePred">-</td> 
-    </tr>
-    <tr>
-        <td>Maths(Out of 80)</td>
-        <td id="matPred">-</td>
-    </tr>
-    <tr>
-        <td>Biology(Out of 70)</td>
-        <td id="bioPred">-</td>
-    </tr>
-    <tr>
-        <td>English(Out of 80)</td>
-        <td id="engPred">-</td>
-    </tr>
-    <tr>
-        <td>AI/PAT(Out of 50)</td>
-        <td id="aiPred">-</td>
-    </tr>
-    <tr>
-        <td>CS/IP(Out of 70)</td>
-        <td id="ipPred">-</td>
-    </tr>
-</table>
-</center>
-<script src="main.js"></script>
+                </tr>
+                <tr id="ip" style="visibility: hidden;">
+                    <td>CS/IP</td>
+                    <td><input type="number" id="c1" min="0" max="35">Out of 35</td>
+                    <td><input type="number" id="c2" min="0" max="70">Out of 70</td>
+                    <td><input type="number" id="c3" min="0" max="35">Out of 35</td>
+
+                </tr>
+                <tr>
+                    <td>AI/PAT</td>
+                    <td><input type="number" id="a1" min="0" max="40">Out of 40</td>
+                    <td><input type="number" id="a2" min="0" max="50">Out of 50</td>
+                    <td><input type="number" id="a3" min="0" max="40">Out of 40</td>
+
+                </tr>
+            </tbody>
+
+        </table>
+    </center>
+    <span></span>
+    <input class="gren btn1" type="number" id="requiredPerc" placeholder="Enter expected final percentage"
+        style="margin-top: 24px; width:216px auto; height: 32px;">
+    <button class="gren btn2 " id="calculateBtn"
+        style="margin-top: 24px; size: width:64px auto; height: 34px;">Calculate</button>
+    <span></span>
+    <h1 id="result1"></h1>
+
+    <h1 id="result2"></h1>
+    <label class="gren" id="prediction" style="padding: 10px 15px; margin-bottom: 30px; border-radius: 10px;">Required marks in
+        finals:</label>
+    <center>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Average marks required</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Physics(Out of 70)</td>
+                <td id="phyPred">-</td>
+            </tr>
+            <tr>
+                <td>Chemistry(Out of 70)</td>
+                <td id="chePred">-</td>
+            </tr>
+            <tr>
+                <td>Maths(Out of 80)</td>
+                <td id="matPred">-</td>
+            </tr>
+            <tr>
+                <td>Biology(Out of 70)</td>
+                <td id="bioPred">-</td>
+            </tr>
+            <tr>
+                <td>English(Out of 80)</td>
+                <td id="engPred">-</td>
+            </tr>
+            <tr>
+                <td>AI/PAT(Out of 50)</td>
+                <td id="aiPred">-</td>
+            </tr>
+            <tr>
+                <td>CS/IP(Out of 70)</td>
+                <td id="ipPred">-</td>
+            </tr>
+        </table>
+    </center>
+    <script src="main.js"></script>
 </body>
+
 </html>

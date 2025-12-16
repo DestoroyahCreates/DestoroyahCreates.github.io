@@ -32,7 +32,7 @@ selectElement.addEventListener('change', (event) => {
     }
 });
 
-button.addEventListener("click", function() {
+button.addEventListener("click", function () {
     console.log("Button clicked!");
     toAchieve = document.getElementById("requiredPerc").value;
 
@@ -86,7 +86,7 @@ button.addEventListener("click", function() {
         totalWeightage = wPhy + wChem + wMath + wBio + wEng + wAi;
     }
     currentWeightage = Number((totalWeightage / 600 * 100).toFixed(2));
-    
+
     document.getElementById("result2").innerText = "Your Weightage is so far is: " + currentWeightage + "%";
     console.log(currentWeightage)
     console.log(checkbox.checked)
@@ -94,44 +94,44 @@ button.addEventListener("click", function() {
         document.getElementById("result1").innerText = "Your Percentage so far is: " + (totalWeightage / 300 * 100).toFixed(2) + "%";
         if (currentWeightage + 50 < toAchieve) {
             console.log(currentWeightage)
-            console.log(currentWeightage+50)
+            console.log(currentWeightage + 50)
             pred.innerText = "You cannot achieve the required percentage even if you score full marks in finals.";
-                document.getElementById("phyPred").innerText = "-";
-                document.getElementById("chePred").innerText = "-";
-                document.getElementById("matPred").innerText = "-";
-                document.getElementById("engPred").innerText = "-";
-                document.getElementById("bioPred").innerText = "-";
-                document.getElementById("ipPred").innerText = "-";
-                document.getElementById("aiPred").innerText = "-";
+            document.getElementById("phyPred").innerText = "-";
+            document.getElementById("chePred").innerText = "-";
+            document.getElementById("matPred").innerText = "-";
+            document.getElementById("engPred").innerText = "-";
+            document.getElementById("bioPred").innerText = "-";
+            document.getElementById("ipPred").innerText = "-";
+            document.getElementById("aiPred").innerText = "-";
         } else {
             console.log(toAchieve, currentWeightage);
             const needed = Math.ceil(toAchieve - currentWeightage);
             console.log(needed);
-            perSub=needed;
+            perSub = needed;
             pred.innerText = "Required marks in finals:";
-            if (stream==="MBPC"){
-                
-                document.getElementById("phyPred").innerText = perSub*70/50;
-                document.getElementById("chePred").innerText = perSub*70/50;
-                document.getElementById("matPred").innerText = perSub*80/50;
-                document.getElementById("engPred").innerText = perSub*80/50;
-                document.getElementById("bioPred").innerText = perSub*70/50;
+            if (stream === "MBPC") {
+
+                document.getElementById("phyPred").innerText = perSub * 70 / 50;
+                document.getElementById("chePred").innerText = perSub * 70 / 50;
+                document.getElementById("matPred").innerText = perSub * 80 / 50;
+                document.getElementById("engPred").innerText = perSub * 80 / 50;
+                document.getElementById("bioPred").innerText = perSub * 70 / 50;
                 document.getElementById("ipPred").innerText = "-";
                 document.getElementById("aiPred").innerText = perSub;
-            } else if (stream==="MPC"){
-                document.getElementById("phyPred").innerText = perSub*70/50;
-                document.getElementById("chePred").innerText = perSub*70/50;
-                document.getElementById("matPred").innerText = perSub*80/50;
-                document.getElementById("engPred").innerText = perSub*80/50;
+            } else if (stream === "MPC") {
+                document.getElementById("phyPred").innerText = perSub * 70 / 50;
+                document.getElementById("chePred").innerText = perSub * 70 / 50;
+                document.getElementById("matPred").innerText = perSub * 80 / 50;
+                document.getElementById("engPred").innerText = perSub * 80 / 50;
                 document.getElementById("bioPred").innerText = "-";
-                document.getElementById("ipPred").innerText = perSub*70/50;
+                document.getElementById("ipPred").innerText = perSub * 70 / 50;
                 document.getElementById("aiPred").innerText = perSub;
-            } else if (stream==="BPC"){
-                document.getElementById("phyPred").innerText = perSub*70/50;
-                document.getElementById("chePred").innerText = perSub*70/50;
-                document.getElementById("bioPred").innerText = perSub*70/50;
-                document.getElementById("ipPred").innerText = perSub*70/50;
-                document.getElementById("engPred").innerText = perSub*80/50;
+            } else if (stream === "BPC") {
+                document.getElementById("phyPred").innerText = perSub * 70 / 50;
+                document.getElementById("chePred").innerText = perSub * 70 / 50;
+                document.getElementById("bioPred").innerText = perSub * 70 / 50;
+                document.getElementById("ipPred").innerText = perSub * 70 / 50;
+                document.getElementById("engPred").innerText = perSub * 80 / 50;
                 document.getElementById("matPred").innerText = "-";
                 document.getElementById("aiPred").innerText = perSub;
             }
